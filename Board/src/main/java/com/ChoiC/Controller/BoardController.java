@@ -37,7 +37,6 @@ public class BoardController {
 	public void BoardWriteGET() throws Exception{
 		
 	}
-	
 	@RequestMapping(value = "/write", method = RequestMethod.POST)
 	public String BoardWritePOST(BoardVO vo) throws Exception{
 		
@@ -52,7 +51,25 @@ public class BoardController {
 		BoardVO vo = service.view(bno);
 		model.addAttribute("view", vo);
 	}
-
+	
+// // Board_Update // //
+	@RequestMapping(value = "/modify", method = RequestMethod.GET)
+	public void BoardModifyGET(@RequestParam("bno") int bno, Model model) throws Exception{
+		BoardVO vo = service.view(bno);
+		model.addAttribute("view", vo);	
+	}
+	@RequestMapping(value = "/modify", method = RequestMethod.POST)
+	public String BoardModifyPOST(BoardVO vo) throws Exception{
+		service.modify(vo);
+		return "redirect:/board/view?bno="+vo.getBno();
+	}
+	
+// // Board_DELETE // //
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public String BoardDeletePOST(@RequestParam("bno") int bno) throws Exception{
+		service.delete(bno); 
+		return "redirect:/board/list";
+	}
 	
 }
 

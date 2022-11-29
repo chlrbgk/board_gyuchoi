@@ -26,11 +26,24 @@ public class BoardServiceImpl implements BoardService {
 	public void write(BoardVO vo) throws Exception {
 		dao.write(vo);
 	}
+
+// Board__Delete //
+	@Override
+	public void delete(int bno) throws Exception{
+		dao.delete(bno);
+	}
+	
  // Board__View // 
 	@Override
 	public BoardVO view(int bno) throws Exception {
 		// TODO Auto-generated method stub
 		return dao.view(bno);
+	}
+
+// Board__Modify //	
+	@Override
+	public void modify(BoardVO vo) throws Exception {
+		dao.modify(vo);
 	}
 	
 	

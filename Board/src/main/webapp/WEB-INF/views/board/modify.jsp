@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>B o a r d__V I E W</title>
+<title>BOARD__UPDATE</title>
 </head>
 <body>
-	
+
 <form method="post">
 
 	<label>제목</label>
@@ -20,15 +20,9 @@
 
 	<textarea cols="50" rows="5" name="content">${view.content}</textarea><br />
 	
-	<div align="center" >
-		<a href = "/board/modify?bno=${view.bno}">BOARD MODIFY</a>
-	</div>
-	<br/>
-	<div align="center" style="font: bold; font-size: 20px">
-		<a href = "/board/delete?bno=${view.bno}">BOARD DELETE</a>
-	</div>
+	<button  type="submit" style="font-size: 20px; color: orange; text-align: center;"> U P D A T E</button>
 
 </form>	
-	
+
 </body>
 </html>
