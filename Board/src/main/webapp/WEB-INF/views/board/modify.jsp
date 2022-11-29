@@ -18,7 +18,7 @@
 	
 	<label>내용</label>
 
-	<textarea cols="50" rows="5" name="content">${view.content}</textarea><br />
+	<textarea cols="50" rows="5" name="content"> ${view.content} </textarea><br />
 	
 	<button  type="submit" style="font-size: 20px; color: orange; text-align: center;"> U P D A T E</button>
 
