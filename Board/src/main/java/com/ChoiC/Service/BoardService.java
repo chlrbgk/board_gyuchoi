@@ -18,7 +18,7 @@ public interface BoardService {
 // Board_View
 	public BoardVO view(int bno) throws Exception;
 	
-// Board_MODIFY
+// Board__MODIFY
 	public void modify(BoardVO vo) throws Exception;
 	
 	

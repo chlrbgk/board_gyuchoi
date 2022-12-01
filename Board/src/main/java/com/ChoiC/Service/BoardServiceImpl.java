@@ -21,7 +21,7 @@ public class BoardServiceImpl implements BoardService {
 		return dao.list();
 	}
 
- // Board_Write //  	
+ // Board__Write //  	
 	@Override
 	public void write(BoardVO vo) throws Exception {
 		dao.write(vo);
