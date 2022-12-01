@@ -46,6 +46,18 @@ public class BoardServiceImpl implements BoardService {
 		dao.modify(vo);
 	}
 	
+// Board__Paging //
+	@Override
+	public int count() throws Exception{
+		return dao.count();
+	}
+
+// Board__List	
+	@Override
+	public List<BoardVO> listPage(int displayPost, int postNum) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.listPage(displayPost, postNum);
+	}
 	
 	
 	

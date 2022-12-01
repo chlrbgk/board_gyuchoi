@@ -7,6 +7,10 @@
 <title>B o a r d__V I E W</title>
 </head>
 <body>
+
+<div id="nav">
+	<%@ include file="../include/nav.jsp" %>
+</div>	
 	
 <form method="post">
 
