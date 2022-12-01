@@ -6,19 +6,19 @@ import com.ChoiC.Domain.BoardVO;
 
 public interface BoardService {
 
-// Board__List	
+// Board_List	
 	public List<BoardVO> list() throws Exception;
 	
-// Board__WRITE
+// Board_WRITE
 	public void write(BoardVO vo) throws Exception;
 
-// Board__Delete
+// Board_Delete
 	public void delete(int bno) throws Exception;
 	
-// Board__View
+// Board_View
 	public BoardVO view(int bno) throws Exception;
 	
-// Board__MODIFY
+// Board_MODIFY
 	public void modify(BoardVO vo) throws Exception;
 	
 	

@@ -67,7 +67,7 @@ public class BoardController {
 // // Board_DELETE // //
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public String BoardDeletePOST(@RequestParam("bno") int bno) throws Exception{
-		service.delete(bno); 
+		service.delete(bno ); 
 		return "redirect:/board/list";
 	}
 	
