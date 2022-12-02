@@ -12,6 +12,15 @@
 		order by bno desc
 		limit 0, 10
 	</select>
+	
+	<!-- Board_List  -->
+	<select id="list2" resultType="com.ChoiC.Domain.BoardVO">
+		select
+			bno, title, content, writer, regDate, viewCnt
+		from dochoi.tbl_board
+		order by bno desc
+		limit 0, 10
+	</select>
 
 <!-- Board  All Count ] -->
  	<select id="count" resultType="int">
@@ -28,6 +37,33 @@
 		order by bno desc
 		limit #{displayPost}, #{postNum}
  	</select>
+
+	<!-- BoardList [list + Paging + Search] -->
+	<select id="listPageSearch" parameterType="hashMap" resultType="com.ChoiC.Domain.BoardVO">
+		select
+			bno, title, writer, regDate, viewCnt
+		from tbl_board
+		
+		<if test='searchType.equals("title")'>
+			WHERE title LIKE concat('%', #{keyword}, '%')
+		</if>
+		
+		<if test='searchType.equals("content")'>
+			WHERE content LIKE concat('%', #{keyword}, '%')
+		</if>
+		
+		<if test='searchType.equals("title_content")'>
+			WHERE title LIKE concat('%', #{keyword}, '%') 
+				or content LIKE concat('%', #{keyword}, '%')
+		</if>
+		
+		<if test='searchType.equals("writer")'>
+			WHERE writer LIKE concat('%', #{keyword}, '%')
+		</if>
+		
+		order by bno desc
+			limit #{displayPost}, #{postNum}
+	</select>	
 
 <!-- Board_Insert -->
 	<insert id="write"  parameterType="com.ChoiC.Domain.BoardVO">

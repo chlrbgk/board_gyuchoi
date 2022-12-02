@@ -18,7 +18,9 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
-
+    <resources mapping="/css/**" location="/css/"/>
+    <resources mapping="/js/**" location="/js/"/>
+	
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
@@ -28,7 +30,10 @@
 	<context:component-scan base-package="com.ChoiC.Controller" />
 	<context:component-scan base-package="com.ChoiC.Dao" />
 	<context:component-scan base-package="com.ChoiC.Service" />
-
+	
+	<context:component-scan base-package="com.GameC.Controller" />
+	<context:component-scan base-package="com.GameC.Dao" />
+	<context:component-scan base-package="com.GameC.Service" />
 	
 	
 </beans:beans>

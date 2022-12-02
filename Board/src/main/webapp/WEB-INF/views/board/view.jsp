@@ -31,7 +31,7 @@
 	<div align="center" style="font: bold; font-size: 20px">
 		<a href = "/board/delete?bno=${view.bno}">BOARD DELETE</a>
 	</div>
-
+	
 </form>	
 	
 </body>

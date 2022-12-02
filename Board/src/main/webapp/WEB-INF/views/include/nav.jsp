@@ -18,5 +18,9 @@
 	<li>
 		<a href="/board/write">글 작성</a>	
 	</li>	
+	
+	<li>
+		<a href="/board/listScript">ListScript</a>	
+	</li>	
 
 </ul>

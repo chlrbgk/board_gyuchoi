@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.GameC.mappers.game">
+
+<!-- GAME BOARD LIST -->
+	<select id="list" resultType="com.GameC.Domain.GameVO">
+		select 
+			gno, gTitle, gContent, gDownCnt, gDate
+		from
+			gameboard
+	</select>
+	
+<!--  GAME BOARD INSERT  -->	
+	<insert id="boardInsert" parameterType="com.GameC.Domain.GameVO">
+	 	insert into dochoi.gameboard
+	 		( gTitle, gWriter, gContent, gTag )
+		values (#{gTitle}, #{gWriter}, #{gContent}, #{gTag})
+	</insert>
+	
+
+</mapper>
